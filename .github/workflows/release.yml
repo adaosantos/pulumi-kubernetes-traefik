@@ -5,7 +5,7 @@ on:
       - main
 jobs:
   publish_package:
-    name: Publish SDKs
+    name: Publish Package
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
