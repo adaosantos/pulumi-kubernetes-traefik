@@ -1,20 +1,29 @@
 {
     "name": "@adaosantos/pulumi-kubernetes-traefik",
-    "repository": "https://github.com/adaosantos/pulumi-kubernetes-traefik.git",
-    "version": "0.0.1",
+    "repository": "https://github.com/adaosantos/pulumi-kubernetes-traefik",
+    "version": "0.0.12",
+    "license": "Apache-2.0",
     "scripts": {
-        "build": "tsc"
+        "build": "tsc",
+        "install": "node scripts/install-pulumi-plugin.js resource kubernetes 0.0.12"
     },
     "publishConfig": {
         "registry": "https://npm.pkg.github.com",
         "access": "public"
     },
     "dependencies": {
+        "@pulumi/kubernetes": "^3.27.1",
         "@pulumi/pulumi": "^3.42.0"
     },
     "devDependencies": {
-        "@types/node": "^14",
-        "typescript": "^4.3.5"
+        "@types/node": "^20.1.7",
+        "@typescript-eslint/eslint-plugin": "^5.51.0",
+        "@typescript-eslint/parser": "^5.51.0",
+        "npm-run-all": "^4.1.5",
+        "rimraf": "^4.4.1",
+        "ts-node": "^10.9.1",
+        "tsx": "^3.12.6",
+        "typescript": "^5.0.4"
     },
     "pulumi": {
         "resource": true,
