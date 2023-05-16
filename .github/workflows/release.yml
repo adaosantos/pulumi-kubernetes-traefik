@@ -1,0 +1,26 @@
+name: release
+on:
+  push:
+    tags:
+      - v*.*.*
+jobs:
+  publish_package:
+    name: Publish SDKs
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+      - name: Unshallow clone for tags
+        run: git fetch --prune --unshallow --tags
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16.x
+          registry-url: "https://npm.pkg.github.com"
+          scope: "@adaosantos"
+      - run: npm ci
+      - uses: JS-DevTools/npm-publish@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          registry: "https://npm.pkg.github.com"
+          access: public
