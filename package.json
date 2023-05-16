@@ -1,5 +1,5 @@
 {
-    "name": "@adaosantos/pulumi-crds-traefik",
+    "name": "@adaosantos/pulumi-kubernetes-traefik",
     "version": "0.0.1",
     "scripts": {
         "build": "tsc"
