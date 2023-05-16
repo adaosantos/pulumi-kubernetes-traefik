@@ -1,5 +1,5 @@
 {
-    "name": "@adaosantos/pulumi-kubernetes-traefik",
+    "name": "pulumi-kubernetes-traefik",
     "repository": "https://github.com/adaosantos/pulumi-kubernetes-traefik.git",
     "version": "0.0.1",
     "scripts": {
